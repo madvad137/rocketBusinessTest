@@ -11,8 +11,8 @@ body{
 
 .container {
     width: 100%;
-    max-width: 1160px;
-    padding: 0 10px;
+    max-width: 1170px;
+    padding: 0 15px;
     margin: 0 auto;
 }
 
@@ -56,7 +56,7 @@ body{
     background: #fff;
     &__information{
         padding-top: 17px;
-        padding-bottom: 17px;
+        padding-bottom: 13px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -109,7 +109,7 @@ body{
         }
     }
     &__navigation{
-        padding: 20px 0;
+        padding: 13px 0;
         background: #1FA181;
     }
 }
@@ -128,6 +128,10 @@ body{
     &__link{
         color: #fff;
     }
+
+    &-footer{
+        padding-left: 40px;
+    }
 }
 
 .burger{
@@ -136,7 +140,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-right: 40px;
+    margin-right: 43px;
     position: relative;
     display: none;
     &__line{
@@ -163,22 +167,22 @@ body{
 }
 
 .intro{
-    padding-top: 130px;
+    padding-top: 112px;
     padding-left: calc((100% - 1160px)/2);
     background: #F8FBFA;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     margin-bottom: 100px;
 
     &__information{
-        padding: 0 30px 0 10px
+        padding: 145px 228px 160px 10px;
     }
     &__title{
         font-size: 36px;
         font-weight: 700;
-        max-width: 350px;
+        max-width: 441px;
         margin-bottom: 15px; 
+        line-height: 47px;
     }
 
     &__subtitle{
@@ -189,11 +193,13 @@ body{
     &__images img{
         object-fit: cover;
         max-width: 100%;
+        height: 100%;
+        object-position: left;
     }
 }
 
 .checkUp{
-    margin-bottom: 155px;
+    margin-bottom: 165px;
     position: relative;
     &__content{
         display: flex;
@@ -231,30 +237,31 @@ body{
     }
 
     &__title{
+        text-transform: uppercase;
         font-size: 38px;
         font-weight: 700;
-        margin-bottom: 15px;
-        margin-top: 40px;
+        margin-bottom: 10px;
+        margin-top: 60px;
     }
 
     &__subtitle{
         font-size: 22px;
         font-weight: 700;
-        margin-bottom: 25px;
+        margin-bottom: 20px;
     }
 
     &__list{
         list-style:disc;
         color: $base-color;
-        margin-bottom: 45px;
-        padding-left: 20px;
+        margin-bottom: 39px;
+        padding-left: 18px;
         & span{
             color: #364844;  
         }
     }
 
     &__item{
-        margin-bottom: 20px;
+        margin-bottom: 13px;
         &:last-child{
             margin-bottom: 0;
         }
@@ -277,14 +284,17 @@ body{
     }
     
     &__buttons{
-        margin-bottom: 40px;
+        margin-bottom: 55px;
+    }
+    &__button{
+       margin-right: 11px; 
     }
 }
 
 
 .slider-navigation{
     position: absolute;
-    bottom: -55px;
+    bottom: -69px;
     z-index: 1;
     width: 170px;
     display: flex;
@@ -406,8 +416,14 @@ body{
     }
 }
 
+@media(max-width:1200px){
+    .intro__information{
+        padding-right: 80px;
+        padding-left: 14px;
+    }
+}
 
-@media(max-width:1035px){
+@media(max-width:1050px){
     .intro{
         margin-bottom: 50px;
     }
@@ -420,7 +436,7 @@ body{
 
 
     .checkUp__information{
-        padding-left: 10px;
+        padding-left: 23px;
     }
     .button{
         min-width: 137px;
@@ -448,6 +464,14 @@ body{
         backdrop-filter: blur(2px);
     }
 
+    .header__logo{
+        width: 62px;
+        height: 18px;
+        & img{
+            max-width: 100%;
+        }
+    }
+
     .header__navigation-active{
         transform: translateX(0);
     }
@@ -465,6 +489,7 @@ body{
     }
     .header__contactBlock-country{
         display: block;
+        font-size: 13px
     }
     .header__number{
         margin-right: 0;
@@ -489,7 +514,11 @@ body{
     }
     .nav__item{
         margin-right: 0;
-        margin-bottom: 15px;
+        margin-bottom: 18px;
+        :last-child{
+            margin-top: 26px;
+            
+        }
     }
     .intro{
         padding-top: 66px;
@@ -506,15 +535,20 @@ body{
     }
     .nav__list-footer{
         flex-direction: column;
+        padding-top: 0;
     }
     .nav{
         order: 2;
+    }
+    .nav-footer{
+        padding-left: 0;
     }
     .footer__socials{
         order: 1;
     }
     .nav__item-footer{
         margin-bottom: 20px;
+        font-size: 14px;
         :last-child{
             margin-bottom: 0;
         }
@@ -532,14 +566,17 @@ body{
     }
     .intro__information{
         order: 1;
+        padding-top: 0;
+        padding-bottom:0;
+        padding-right: 25px;
     }
     .intro__images{
         order: 0;
-        margin-bottom: 50px;
+        margin-bottom: 34px;
     }
 }
 
-@media(max-width:665px){
+@media(max-width:705px){
     .checkUp__information::after{
         display: none;
     }
@@ -555,17 +592,62 @@ body{
         order: 1;
     }
     .checkUp__title{
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 }
 
 @media(max-width:470px){
     .footer__logo{
-        width: 45%;
+        width: 65%;
     }
-    .checkUp__buttons{
-        text-align: center;
-        margin-left: -10px;
+
+    .intro{
+        margin-bottom: 96px;
+    }
+
+    .intro__images{
+        height: 287px;
+        object-position: center;
+    }
+    .intro__title {
+        max-width: 255px;
+        line-height: 34px;
+        margin-bottom: 5px;
+    }
+
+    .checkUp__image{
+        height: 169px;
+    }
+    .checkUp__title{
+        font-size: 26px;
+        margin-top: 27px;
+    }
+    .checkUp__subtitle{
+        font-size: 14px;
+    }
+
+    .checkUp__list{
+        max-width: 300px;
+        margin-bottom: 29px;
+    }
+    .checkUp__newPrise{
+        font-size: 18px;
+    }
+
+    .checkUp__oldPrise{
+        font-size: 14px;
+    }
+
+    .slider-navigation{
+        bottom: -45px;
+    }
+
+    .checkUp{
+        margin-bottom: 80px;
+    }
+    .footer__socials-link img{
+        width: 24px;
+        height: 24px;
     }
 }
 
